@@ -304,8 +304,8 @@ footer {
 
 .project {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 80px;
     row-gap: 80px;
     padding: 300px;
     padding-top: 0px;
