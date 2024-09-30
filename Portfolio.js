@@ -1,9 +1,9 @@
-
+//this code automatically scrolls the webpage to the section with the ID About as soon as the DOM is fully loaded. 
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('About').scrollIntoView();
 });
 
-
+//night mode and bright mode
 let button = document.getElementById('mode');
 let isNightMode = localStorage.getItem('mode') === 'night';
 
@@ -27,16 +27,12 @@ button.addEventListener('click', function () {
 });
 button.click();
 
-
+//view resume
 function openPDF() {
     window.location.href = "Chang Suet Yan CV.pdf"
 }
 
-
-
-
-
-
+// typing animation where each character of the text in the element with the class name fades in one by one.
 document.addEventListener("DOMContentLoaded", function () {
     const text = document.querySelector('.name');
     const strText = text.textContent;
@@ -66,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-//animation from lefet to right
+//animation from left to right
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         console.log(entry)
@@ -78,10 +74,11 @@ const observer = new IntersectionObserver((entries) => {
     });
 });
 
+//tooltip
 let hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
-let projects = document.querySelectorAll('.project1');
+let projects = document.querySelectorAll('.project');
 
 projects.forEach(project => {
     let gitHubIcon = project.querySelector('.fa-github');
