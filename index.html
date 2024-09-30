@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
 
+    <!--font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,41 +21,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Freehand&family=Rubik+Gemstones&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
       href="https://fonts.googleapis.com/css2?family=Freehand&family=Fuzzy+Bubbles:wght@400;700&family=Rubik+Gemstones&display=swap"
       rel="stylesheet"
     />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-    <!--font awesome -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Moo+Lah+Lah&family=Rubik+Bubbles&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Faster+One&family=Moo+Lah+Lah&family=Rubik+Bubbles&family=Rubik+Puddles&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Freehand&family=Rubik+Gemstones&display=swap"
       rel="stylesheet"
     />
 
@@ -66,15 +45,15 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <!--bootstrap carousell-->
 
     <link rel="stylesheet" href="Portfolio.css" />
   </head>
 
   <body>
+    <!--header part-->
     <nav class="navbar">
       <ul>
-        <li class="portfolio"><h2>Suet Yan</h2></li>
+        <li class="logo"><h2>Suet Yan</h2></li>
         <i id="mode" class="fa-solid fa-sun" style="color: #ffd43b"></i>
         <li><a href="#About">About</a></li>
         <li><a href="#Education">Education</a></li>
@@ -83,14 +62,15 @@
       </ul>
     </nav>
 
+    <!-- About page -->
     <section id="About">
       <div>
-        <img class="image1" src="myPhoto.jpeg" />
+        <img class="profile-pic" src="myPhoto.jpeg" />
       </div>
 
       <div class="site-home">
         <div>
-          <h1>Hi, there!</h1>
+          <h1>Hi, there <span class="hi-emoji">👋🏻</span></h1>
           <h1>I'm <span class="name">Chang Suet Yan</span></h1>
           <br />
           <p class="desc">
@@ -100,12 +80,12 @@
             innovative tech companies through my analytical expertise and
             dedication to creating seamless user experiences. Let’s discover how
             my unique blend of analytical skills and creativity can drive the
-            team’s success!
+            team’s success!!
           </p>
         </div>
 
         <div>
-          <img class="image2" src="linkedin.png" alt="linkedin" />
+          <img class="linkedIn-image" src="linkedin.png" alt="linkedin" />
           <a
             class="linkedin"
             href="https://www.linkedin.com/in/suet-yan-chang-557995245/"
@@ -115,41 +95,39 @@
         </div>
 
         <div class="cvbutton">
-          <button class="dbutton" onclick="openPDF()">Download CV</button>
+          <button class="dbutton" onclick="openPDF()">View Resume</button>
         </div>
       </div>
 
       <footer></footer>
     </section>
 
+    <!-- Education page -->
     <section id="Education">
-      <div class="welcome-project">
-        <h1 class="education-title">Academic Background and Skills</h1>
+      <div class="edu-project">
+        <h1 class="edu-title">Academic Background and Skills</h1>
         <br />
-        <p class="edu-project2">
+        <p class="edu-desc">
           Discover my educational pathway and competencies, emphasizing my
           proficiency in business analytics and data-driven decision-making.
         </p>
       </div>
 
-      <div class="stats">
-        <div class="result">
-          <h1 class="result1">
-            Bachelor degree of Business Analytics (Honours) at Sunway University
+      <div>
+        <div class="edu-sunway">
+          <h1 class="sunway-degree">
+            👩🏻‍🎓 Bachelor degree of Business Analytics (Honours) at Sunway
+            University
           </h1>
-          <p class="result2">CGPA: 3.72 (First Class)</p>
+          <p class="cgpa">🌟 CGPA: 3.72 (First Class)</p>
         </div>
       </div>
 
-      <div>
-        <img class="image3" src="image3.png" />
-      </div>
-
-      <div class="skill hidden">
-        <div class="skill2">
-          <h2 class="visualization">Analysis & Visualization</h2>
+      <div class="skills hidden">
+        <div class="analysis-visualization">
+          <h2 class="skill-title">Analysis & Visualization</h2>
           <div>
-            <ul class="point">
+            <ul class="skill-list">
               <li>IBM SPSS</li>
               <li>MySQL</li>
               <li>Weka</li>
@@ -162,40 +140,45 @@
           </div>
         </div>
 
-        <div class="skill3">
-          <h2 class="front-end">Front-end development</h2>
+        <div class="front-end-development">
+          <h2 class="skill-title">Front-end development</h2>
           <div>
-            <ul class="point">
+            <ul class="skill-list">
               <li>HTML</li>
               <li>CSS</li>
               <li>Javascript</li>
               <li>React.js</li>
+              <li>PHP</li>
             </ul>
           </div>
+        </div>
+
+        <div>
+          <img class="image-girl" src="image3.png" />
         </div>
       </div>
 
       <footer></footer>
     </section>
 
-    <!--next page-->
+    <!--Project page-->
     <section id="Projects">
-      <div class="welcome-project">
-        <h1 class="welcome-project1">Welcome to My Project Portfolio!</h1>
-        <p class="short-description">
-          This showcases a series of assignments where I've applied advanced
-          analytics techniques to provide actionable insights for strategic
-          decision-making, demonstrating my proficiency as a business analytics
-          student ready to excel in real-world scenarios.
+      <div>
+        <h1 class="project-header">Welcome to My Project Portfolio!</h1>
+        <p class="project-description">
+          This section highlights small projects I have developed using tools
+          like HTML, CSS, JavaScript, and React.js. These projects demonstrate
+          my skills in front-end development, problem-solving and creating
+          practical solutions, reflecting my passion for coding and learning.
         </p>
       </div>
 
-      <div class="project hidden">
-        <div class="project1">
-          <img class="project-photo" src="Rock Paper Scissors.png" />
+      <div class="projects-container hidden">
+        <div class="project">
+          <img class="project-image" src="Rock Paper Scissors.png" />
           <h2 class="project-title">Rock Paper Scissors</h2>
           <br />
-          <p class="project-desc">HTML, CSS, Javascript</p>
+          <p class="tech-stack">HTML, CSS, Javascript</p>
           <br />
           <div>
             <a
@@ -208,11 +191,11 @@
           </div>
         </div>
 
-        <div class="project1">
-          <img class="project-photo" src="flappyBirdPhoto.png" />
+        <div class="project">
+          <img class="project-image" src="flappyBirdPhoto.png" />
           <h2 class="project-title">Flappy Bird</h2>
           <br />
-          <p class="project-desc">HTML, CSS, Javascript</p>
+          <p class="tech-stack">HTML, CSS, Javascript</p>
           <br />
           <div>
             <a
@@ -225,11 +208,11 @@
           </div>
         </div>
 
-        <div class="project1">
-          <img class="project-photo" src="calculator.png" />
+        <div class="project">
+          <img class="project-image" src="calculator.png" />
           <h2 class="project-title">Calculator</h2>
           <br />
-          <p class="project-desc">HTML, CSS, Javascript</p>
+          <p class="tech-stack">HTML, CSS, Javascript</p>
           <br />
           <div>
             <a
@@ -242,11 +225,11 @@
           </div>
         </div>
 
-        <div class="project1 card">
-          <img class="project-photo card-image" src="ToDoList.png" />
+        <div class="project card">
+          <img class="project-image card-image" src="ToDoList.png" />
           <h2 class="project-title card-title">To-do-list</h2>
           <br />
-          <p class="project-desc card-text">React.js</p>
+          <p class="tech-stack card-text">React.js</p>
           <br />
           <div>
             <a
@@ -259,11 +242,11 @@
           </div>
         </div>
 
-        <div class="project1 card">
-          <img class="project-photo card-image" src="Stopwatch.png" />
+        <div class="project card">
+          <img class="project-image card-image" src="Stopwatch.png" />
           <h2 class="project-title card-title">Stopwatch</h2>
           <br />
-          <p class="project-desc card-text">React.js</p>
+          <p class="tech-stack card-text">React.js</p>
           <br />
           <div>
             <a
@@ -277,15 +260,19 @@
         </div>
       </div>
 
-      <div class="carousel">
-        <h1 class="visualization-title">Visualization</h1>
-        <p class="short-description">
-          My proficiency in visualization gives me a competitive edge,
-          empowering me to analyze data swiftly and make informed decisions,
-          propelling our team towards success
+      <div>
+        <h1 class="visualization-header">Visualization</h1>
+        <p class="visualization-description">
+          This showcases a series of assignments where I've applied advanced
+          analytics techniques to provide actionable insights for strategic
+          decision-making, demonstrating my proficiency as a business analytics
+          student ready to excel in real-world scenarios.
         </p>
 
-        <div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div
+          id="carouselExampleDark"
+          class="carousel carousel-dark slide hidden"
+        >
           <div class="carousel-indicators">
             <button
               type="button"
@@ -315,11 +302,15 @@
             <div class="carousel-item active" data-bs-interval="10000">
               <img class="carousel-image" src="powerBI.png" />
               <div>
-                <p class="short-description">
+                <p class="carousel-description">
                   Project Dashboard Management System to monitor the performance
                   of Budgeted Items with the Committed and Actualize amount to
                   control the cost for the entire project using <b>Power BI</b
-                  ><br />
+                  ><br /><a
+                    href="https://drive.google.com/file/d/In_M3snvY3olyNAnItGEigO8NbNm_mOSW/view?
+                usp=share link"
+                    >Link to Power BI File
+                  </a>
                 </p>
               </div>
             </div>
@@ -327,7 +318,7 @@
             <div class="carousel-item" data-bs-interval="2000">
               <img class="carousel-image" src="Tableau.png" />
               <div>
-                <p class="short-description">
+                <p class="carousel-description">
                   Utilize <b>Tableau</b> to indentify trends and customer
                   purchasing pattern on e-commerce datasets from Kaggle during
                   and after the pandemic.<br /><a
@@ -339,14 +330,14 @@
             </div>
 
             <div class="carousel-item">
-              <div class="carousel-thirdpage">
-                <h3>More Assignment</h3>
+              <div class="more-assignments">
+                <h2>More Assignment</h2>
                 <br />
                 <p>
-                  <u>Web & Social Media Analytic Assignment</u>: Perform Sentiment
+                  Web & Social Media Analytic Assignment: Perform Sentiment
                   Analysis, Social Network Analysis and Semantic Network, to
-                  deliver crucial insights into consumer perceptions about
-                  Tesla Model 3 using <b>Python and NodeXL</b>.
+                  deliver crucial insights into consumer perceptions about Tesla
+                  Model 3 using <b>Python and NodeXL</b>.
                 </p>
                 <a
                   href="https://imailsunwayedu-my.sharepoint.com/:w:/r/personal/22016521_imail_sunway_edu_my/Documents/BBA/Y3S1/Web%20%26%20Social%20Media%20Analytic/Assignment/Ind%20Assign%203/Chang%20Suet%20Yan_22016521.docx?d=wf9b38ddd19014679906a483d1248e30b&csf=1&web=1&e=wX2csg"
@@ -356,10 +347,10 @@
                 ><br /><br />
 
                 <p>
-                  <u>Management Information Systems Assignment</u>: Development of Graphical Analysis using
-                  combination of <b>Python</b> libraries to solve the
-                  organization Financial Expenses Monitoring from complex
-                  dimension and attributes.
+                  Management Information Systems Assignment: Development of
+                  Graphical Analysis using combination of
+                  <b>Python</b> libraries to solve the organization Financial
+                  Expenses Monitoring from complex dimension and attributes.
                 </p>
                 <a
                   href="https://youtu.be/gAQQxhWIIBE"
@@ -394,17 +385,17 @@
       <footer></footer>
     </section>
 
-    <!--next page-->
+    <!--Certification page-->
     <section id="Certifications">
-      <h1 class="cert">Certificates</h1>
-      <div class="cert-container">
+      <h1 class="certification-header">Certificates</h1>
+      <div class="certification-container">
         <img
           src="GoogleHackathon.png"
-          class="responsive-image"
+          class="certification-image"
           alt="Google Hackathon Certificate"
         />
-        <div class="cert-content">
-          <h3>Google Hackathon 2024</h3>
+        <div class="certification-details">
+          <h3 class="certification-name"><u>Google Hackathon 2024</u></h3>
           <p>
             Leveraging Google Forms, Google Sheets, and Google Apps Script to
             streamline the finance department's claim process: Employees fill
