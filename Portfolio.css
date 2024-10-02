@@ -82,9 +82,8 @@ li a:hover {
 }
 
 .site-home {
-    float: left;
-    width: 100vh;
-    margin-left: 6vw;
+    float: right;
+    width: 110vh;
     margin-top: 16vh;
 }
 
