@@ -74,17 +74,18 @@ li a:hover {
 /*About page*/
 .profile-pic {
     border-radius: 100px;
-    width: 35%;
-    margin-top: 60px;
-    padding: 50px;
+    width: 30vw;
+    margin-top: 10vh;
+    margin-left: 3vw;
+    padding: 5vh;
     float: left;
 }
 
 .site-home {
-    float: right;
-    width: 60%;
-    margin-left: 50px;
-    margin-top: 160px;
+    float: left;
+    width: 100vh;
+    margin-left: 6vw;
+    margin-top: 16vh;
 }
 
 .hi-emoji {
