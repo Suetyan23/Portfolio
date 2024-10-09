@@ -403,7 +403,7 @@ footer {
   }
 
 /*Certifications page*/
-.certification-container {
+.certification-image-container {
     margin: 20px;
     display: flex;         
     align-items: flex-start;  
