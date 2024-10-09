@@ -411,8 +411,11 @@ footer {
 }
 
 .certification-image {
+    padding: 20px;
     max-width: 500px;         
-    height: auto;             
+    overflow: visible;
+    width: 100%;  
+    height: auto;              
 }
 
 .certification-details {
@@ -420,6 +423,10 @@ footer {
     display: flex;
     flex-direction: column;   
     gap: 10px;               
+}
+
+.deanlist{
+    height: 95vh;      
 }
 
 .certification-name{
