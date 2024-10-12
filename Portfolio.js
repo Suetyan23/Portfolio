@@ -62,19 +62,18 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+
 //animation from left to right
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-        console.log(entry)
         if (entry.isIntersecting) {
             entry.target.classList.add('show');
-        } else {
-            entry.target.classList.remove('show');
+            // Unobserve the element once it is shown to keep it visible
+            observer.unobserve(entry.target);
         }
     });
 });
 
-//tooltip
 let hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
