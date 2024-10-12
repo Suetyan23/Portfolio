@@ -402,6 +402,10 @@ footer {
     margin: 0 auto;
   }
 
+.tesla{
+    height: 300px;
+  }
+
 /*Certifications page*/
 .certification-image-container {
     margin: 20px;
