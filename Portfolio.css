@@ -223,8 +223,7 @@ footer {
 }
 
 .edu-sunway {
-    padding: 50px;
-    padding-top: 0px;
+    padding: 0 50px 30px;
     animation: pulse 2.5s infinite;
 }
 
