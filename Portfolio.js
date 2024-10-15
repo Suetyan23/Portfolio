@@ -27,9 +27,9 @@ button.addEventListener('click', function () {
 });
 button.click();
 
-//view resume
-function openPDF() {
-    window.location.href = "Chang Suet Yan CV.pdf"
+//view resume and ref letter
+function openPDF(fileName) {
+    window.location.href = fileName;
 }
 
 // typing animation where each character of the text in the element with the class name fades in one by one.
