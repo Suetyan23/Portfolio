@@ -173,6 +173,26 @@ a:active {
     transform: translateY(4px);
 }
 
+.tbutton{
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #75bff4;
+    border-radius: 20px;
+    box-shadow: 0 9px #05136a;
+    margin-left: 50px;
+}
+
+.tbutton:hover {
+    background-color: #3414b5;
+}
+
+.tbutton:active {
+    background-color: hsl(244, 75%, 76%);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
 footer {
     visibility: hidden;
     clear: both;
