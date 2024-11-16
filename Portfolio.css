@@ -203,33 +203,8 @@ footer {
 
 /* Larger Mobile or Tablet Screens */
 @media (max-width: 380px) {
-    .profile-pic {
-        width: 70%;
-        margin-top: 10px;
-        padding: 10px;
-    }
-
-    .site-home {
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    .name, .edu-title, .edu-sunway, .project-header, .visualization-header, .certification-header{
-        font-size: 30px;
-    }
-
-    .card {
-        max-width: 100%;
-    }
-
-    .projects-container {
-        display: block;
-        padding: 10px;
-    }
-
-    .carousel-image {
-        width: 100%;
-        height: auto;
+    body{
+        background-color: blue;
     }
 }
 
