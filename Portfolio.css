@@ -200,33 +200,20 @@ footer {
 }
 
 @media (max-width: 768px) {
-    /* Navbar */
-    .navbar ul {
-        text-align: left;
-    }
-
-    .navbar li {
-        display: block;
-        text-align: left;
-    }
-
-    .navbar li a {
-        padding: 12px;
-    }
-
     /* Profile Picture and Text Layout */
     .profile-pic {
-        width: 50%;
-        margin-top: 20px;
-        padding: 20px;
+        width: 100%;
+        margin: 20px;
+        padding: 10px;
         float: none;
         margin: 0 auto;
     }
 
     .site-home {
-        width: 90%;
-        margin-left: 0;
-        margin-top: 20px;
+        width: 100%;
+        margin: 20px;
+        padding: 10px;
+        text-align: justify;
     }
 
     /* Name Styling */
@@ -236,9 +223,9 @@ footer {
 
     /* Button Styles */
     .dbutton, .tbutton {
-        width: 100%;
-        margin-top: 20px;
-        padding: 12px;
+        width: 50%;
+        margin: 20px;
+        padding: 10px;
     }
 
     /* Skills Section */
@@ -268,6 +255,7 @@ footer {
         height: auto;
     }
 }
+
 
 /* Larger Mobile or Tablet Screens */
 @media (max-width: 480px) {
