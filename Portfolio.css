@@ -270,7 +270,7 @@ footer {
         margin-top: 20px;
     }
 
-    .name {
+    .name, .edu-title, .edu-sunway, .project-header, .visualization-header, .certification-header{
         font-size: 30px;
     }
 
