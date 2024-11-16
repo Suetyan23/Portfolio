@@ -438,15 +438,24 @@ footer {
     font-style: oblique;
 }
 
-.projects-container {
+.projects-container, .skills {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 80px;
-    row-gap: 80px;
-    padding: 300px;
+    column-gap: 20px;
+    row-gap: 20px;
+    padding: 20px;
     padding-top: 0px;
     padding-bottom: 0px;
     justify-content: center;
+}
+
+.carousel-item{
+    width: 100%;
+}
+
+.certificates-container{
+    display: block;
+    width: 100%
 }
 
 .project-image {
