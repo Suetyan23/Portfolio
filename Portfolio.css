@@ -49,17 +49,18 @@ p {
     text-shadow: 1px 2px 2px whitesmoke;
 }
 
-ul {
+.navbar ul {
     list-style-type: none;
     background-color: #292929;
-    text-align: right
+    text-align: right;
+    padding: 0;
 }
 
-li {
+.navbar li {
     display: inline-block;
 }
 
-li a {
+.navbar li a {
     display: block;
     color: white;
     text-align: center;
@@ -67,7 +68,7 @@ li a {
     text-decoration: none;
 }
 
-li a:hover {
+.nav li a:hover {
     background-color: #111111;
 }
 
