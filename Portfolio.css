@@ -202,12 +202,23 @@ footer {
 
 
 /* Larger Mobile or Tablet Screens */
-@media (max-width: 414 px) {
-    body{
-        background-color: blue;
+  @media (min-width: 768px) {
+    .body {
+      background-color: blue;
     }
-}
-
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
 /*Education page*/
 .edu-project {
     padding: 50px;
