@@ -203,20 +203,20 @@ footer {
 
 /* Larger Mobile or Tablet Screens */
   @media (min-width: 768px) {
-    .body {
+    body {
       background-color: blue;
     }
   }
   /* Medium */
   @media (min-width: 992px) {
-    .container {
-      width: 970px;
+    body {
+      background-color: pink;
     }
   }
   /* Large */
   @media (min-width: 1200px) {
-    .container {
-      width: 1170px;
+    body {
+      background-color: yellow;
     }
   }
 /*Education page*/
