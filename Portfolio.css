@@ -202,7 +202,7 @@ footer {
 
 
 /* Larger Mobile or Tablet Screens */
-@media (max-width: 414px) {
+@media (max-width: 714px) {
     body{
         background-color: blue;
     }
