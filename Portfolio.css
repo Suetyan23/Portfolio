@@ -199,6 +199,108 @@ footer {
     clear: both;
 }
 
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar ul {
+        text-align: left;
+    }
+
+    .navbar li {
+        display: block;
+        text-align: left;
+    }
+
+    .navbar li a {
+        padding: 12px;
+    }
+
+    /* Profile Picture and Text Layout */
+    .profile-pic {
+        width: 50%;
+        margin-top: 20px;
+        padding: 20px;
+        float: none;
+        margin: 0 auto;
+    }
+
+    .site-home {
+        width: 90%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    /* Name Styling */
+    .name {
+        font-size: 40px;
+    }
+
+    /* Button Styles */
+    .dbutton, .tbutton {
+        width: 100%;
+        margin-top: 20px;
+        padding: 12px;
+    }
+
+    /* Skills Section */
+    .skills {
+        display: block;
+        padding: 20px;
+    }
+
+    .analysis-visualization,
+    .front-end-development {
+        width: 100%;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+    }
+
+    /* Projects Section */
+    .projects-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+        row-gap: 20px;
+        padding: 20px;
+    }
+
+    .project-image {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Larger Mobile or Tablet Screens */
+@media (max-width: 480px) {
+    .profile-pic {
+        width: 70%;
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    .site-home {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .name {
+        font-size: 30px;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    .projects-container {
+        display: block;
+        padding: 10px;
+    }
+
+    .carousel-image {
+        width: 100%;
+        height: auto;
+    }
+}
+
 /*Education page*/
 .edu-project {
     padding: 50px;
