@@ -200,66 +200,9 @@ footer {
     clear: both;
 }
 
-@media (max-width: 768px) {
-    /* Profile Picture and Text Layout */
-    .profile-pic {
-        width: 100%;
-        margin: 20px;
-        padding: 10px;
-        float: none;
-        margin: 0 auto;
-    }
-
-    .site-home {
-        width: 100%;
-        margin: 20px;
-        padding: 10px;
-        text-align: justify;
-    }
-
-    /* Name Styling */
-    .name {
-        font-size: 100px;
-    }
-
-    /* Button Styles */
-    .dbutton, .tbutton {
-        width: 50%;
-        margin: 20px;
-        padding: 10px;
-    }
-
-    /* Skills Section */
-    .skills {
-        display: block;
-        padding: 20px;
-    }
-
-    .analysis-visualization,
-    .front-end-development {
-        width: 100%;
-        margin-bottom: 20px;
-        box-sizing: border-box;
-    }
-
-    /* Projects Section */
-    .projects-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 20px;
-        row-gap: 20px;
-        padding: 20px;
-    }
-
-    .project-image {
-        width: 100%;
-        height: auto;
-    }
-}
-
 
 /* Larger Mobile or Tablet Screens */
-@media (max-width: 480px) {
+@media (max-width: 380px) {
     .profile-pic {
         width: 70%;
         margin-top: 10px;
