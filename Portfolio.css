@@ -201,24 +201,22 @@ footer {
 }
 
 
-/* Larger Mobile or Tablet Screens */
-  @media (min-width: 768px) {
-    body {
-      background-color: blue;
-    }
+@media (max-width: 768px) {
+  body {
+    background-color: blue;
   }
-  /* Medium */
-  @media (min-width: 992px) {
-    body {
-      background-color: pink;
-    }
+}
+@media (min-width: 769px) and (max-width: 991px) {
+  body {
+    background-color: pink;
   }
-  /* Large */
-  @media (min-width: 1200px) {
-    body {
-      background-color: yellow;
-    }
+}
+@media (min-width: 992px) {
+  body {
+    background-color: yellow;
   }
+}
+
 /*Education page*/
 .edu-project {
     padding: 50px;
