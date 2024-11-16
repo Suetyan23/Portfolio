@@ -70,8 +70,12 @@ p {
     text-decoration: none;
 }
 
-.nav li a:hover {
+.navbar li a:hover {
     background-color: #111111;
+}
+
+.navbar li a:active {
+    color: pink;
 }
 
 /*About page*/
