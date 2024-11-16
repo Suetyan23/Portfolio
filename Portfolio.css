@@ -1,3 +1,4 @@
+
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -31,11 +32,11 @@ p {
 .navbar {
     padding: 0;
     font-family: 'Times New Roman', Times, serif;
-    display: inline-block;
+    display: block;
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 1;
 }
 
 .logo {
@@ -200,28 +201,10 @@ footer {
     clear: both;
 }
 
-
-@media (max-width: 768px) {
-  body {
-    background-color: blue;
-  }
-}
-@media (min-width: 769px) and (max-width: 991px) {
-  body {
-    background-color: pink;
-  }
-}
-@media (min-width: 992px) {
-  body {
-    background-color: yellow;
-  }
-}
-
 /*Education page*/
 .edu-project {
     padding: 50px;
     padding-top: 80px;
-    width: auto;
 }
 
 .edu-title{
@@ -366,24 +349,15 @@ footer {
     font-style: oblique;
 }
 
-.projects-container, .skills {
+.projects-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 20px;
-    row-gap: 20px;
-    padding: 20px;
+    column-gap: 80px;
+    row-gap: 80px;
+    padding: 300px;
     padding-top: 0px;
     padding-bottom: 0px;
     justify-content: center;
-}
-
-.carousel-item{
-    width: 100%;
-}
-
-.certificates-container{
-    display: block;
-    width: 100%
 }
 
 .project-image {
