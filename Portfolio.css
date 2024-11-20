@@ -189,7 +189,7 @@ footer {
 /*start landing*/
 .profile-pic {
     border-radius: 100px;
-    width: 30%;
+    width: 30vw;
     margin-top: 100px;
     margin-left: 40px;
     padding: 20px;
@@ -198,7 +198,7 @@ footer {
 
 .site-home {
     float: right;
-    width: 60%;
+ width: 60vw;
     margin-left: 20px;
     margin-top: 160px;
 }
