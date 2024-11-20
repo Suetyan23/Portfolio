@@ -32,6 +32,10 @@ function openPDF(fileName) {
     window.location.href = fileName;
 }
 
+function toggleMenu() {
+  const links = document.querySelector('.header .links');
+  links.classList.toggle('menu-open');
+}
 
 // typing animation where each character of the text in the element with the class name fades in one by one.
 document.addEventListener("DOMContentLoaded", function () {
