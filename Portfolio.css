@@ -1,16 +1,17 @@
-
+/* start Global Rules */
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
+:root {
+    --dark-grey: #292929;
+    --light-pink: lightpink;
+  }
+
 html {
     scroll-behavior: smooth;
-}
-
-* {
-    margin: 0;
 }
 
 body.bright-mode {
@@ -28,76 +29,184 @@ p {
     font-size: large;
 }
 
-/*header part*/
-.navbar {
-    padding: 0;
+footer {
+    visibility: hidden;
+    clear: both;
+}
+
+@media (min-width: 768px) {      
+    .container {
+      width: 750px;
+    }
+  }
+  @media (min-width: 992px) {      
+    .container {
+      width: 970px;
+    }
+  }
+  @media (min-width: 1400px) {     
+    .container {
+      width: 1300px;
+    }
+  }
+/* End Global Rules */
+/*start header*/
+.header {
     font-family: 'Times New Roman', Times, serif;
-    display: block;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1;
+    background-color: var(--dark-grey);
 }
 
-.logo {
+.header .container {
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+
+.header .logo{
     color: white;
     padding: 10px;
-    margin-left: 30px;
-    text-align: left;
     float: left;
     font-family: "Freehand", cursive;
-    font-weight: 400;
-    font-style: normal;
     text-shadow: 1px 2px 2px whitesmoke;
 }
 
-.navbar ul {
+.header .logo:hover{
+    transform:scale(2);
+    z-index: 1;
+  }
+
+  .header .links ul {
     list-style-type: none;
-    background-color: #292929;
-    text-align: right;
+    margin: 0;
     padding: 0;
-}
-
-.navbar li {
-    display: inline-block;
-}
-
-.navbar li a {
+  }
+  
+  .header .links li a {
     display: block;
+    text-decoration: none;
     color: white;
     text-align: center;
     padding: 16px;
-    text-decoration: none;
-}
-
-.navbar li a:hover {
+    transition: 0.3s;
+  }
+  
+  .header .links li a:hover {
     background-color: #111111;
-}
-
-.navbar li a:active {
+  }
+  
+  .header .links li a:active {
     color: pink;
-}
+  }
+  
+  /* Laptop View (Default) */
+  .header .links ul {
+    display: flex; 
+    justify-content: flex-end; 
+    background-color: #292929;
+  }
+  
+  .header .links li {
+    display: inline-block;
+  }
+  
+  /* Mobile View */
+  @media screen and (max-width: 768px) {
+    .header .links {
+      position: relative;
+    }
+  
+    .header .links .icon {
+      width: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+  
+    .header .links .icon span {
+      background-color: var(--light-pink);
+      height: 2px;
+      margin-bottom: 5px;
+    }
+  
+    .header .links .icon span:nth-child(2) {
+      width: 60%;
+      transition: 0.3s;
+    }
+  
+    .header .links .icon:hover span:nth-child(2) {
+      width: 100%;
+    }
+  
+    .header .links ul {
+      display: none; /* Hidden by default */
+      flex-direction: column; /* Stack links vertically */
+      position: absolute;
+      top: calc(100% + 15px);
+      right: 0;
+      min-width: 200px;
+      background-color: #333;
+      z-index: 1;
+    }
+  
+    .header .links ul::before {
+      content: "";
+      position: absolute;
+      right: 5px;
+      top: -10px;
+      border-width: 10px;
+      border-style: solid;
+      border-color: transparent transparent #333 transparent;
+    }
+  
+    .header .links:hover ul {
+      display: block;
+    }
+  
+    .header .links ul li a {
+      padding: 15px;
+      color: #ddd;
+      border-bottom: 1px solid #ddd;
+    }
+  
+    .header .links ul li a:last-child {
+      border-bottom: none;
+    }
+  
+    .header .links ul li a:hover {
+      color: lightpink;
+      padding-left: 25px;
+      text-decoration: underline;
+    }
+  }
 
-/*About page*/
+  
+ /* end header */
+/*start landing*/
 .profile-pic {
     border-radius: 100px;
-    width: 35%;
-    margin-top: 60px;
-    padding: 50px;
+    width: 30%;
+    margin-top: 100px;
+    margin-left: 40px;
+    padding: 20px;
     float: left;
 }
 
 .site-home {
     float: right;
     width: 60%;
-    margin-left: 50px;
+    margin-left: 20px;
     margin-top: 160px;
 }
 
 .hi-emoji {
     display: inline-block;
     animation: wave 1s infinite;
-    transform-origin: 70% 70%; /* Adjusting to make the waving more natural */
+    transform-origin: 70% 70%; 
   }
 
   @keyframes wave {
@@ -124,7 +233,7 @@ p {
     opacity: 1;
 }
 
-h1 {
+.site-home h1 {
     font-size: xx-large;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
@@ -173,54 +282,20 @@ a:active {
 .dbutton:hover {
     background-color: #812587;
 }
-
-.dbutton:active {
-    background-color: hsl(324, 59%, 64%);
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-}
-
-.tbutton{
-    font-size: 24px;
-    cursor: pointer;
-    color: #fff;
-    background-color: #75bff4;
-    border-radius: 20px;
-    box-shadow: 0 9px #05136a;
-    margin-left: 50px;
-}
-
-.tbutton:hover {
-    background-color: #3414b5;
-}
-
-.tbutton:active {
-    background-color: hsl(244, 75%, 76%);
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-}
-
-footer {
-    visibility: hidden;
-    clear: both;
-}
-
-/*Education page*/
-.edu-project {
-    padding: 50px;
-    padding-top: 80px;
-}
-
-.edu-title{
+/*end landing*/
+/*start features*/
+.feat h1{
     text-align: center;
     text-shadow: 4px 4px 8px whitesmoke;
     font-family: "Moo Lah Lah", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 90px;
+    padding-top: 10vh; 
+    
 }
 
-.edu-desc {
+.feat .edu-desc {
     padding: 20px;
     text-align: center;
     font-style: oblique;
@@ -229,7 +304,7 @@ footer {
 }
 
 .edu-sunway {
-    padding: 0 50px 30px;
+    margin: 40px 0;
     animation: pulse 2.5s infinite;
 }
 
@@ -245,17 +320,16 @@ footer {
     }
   }  
 
-.sunway-degree {
+.edu-sunway h1, .certification-details h1{
     font-family: "Fuzzy Bubbles", sans-serif;
-    font-size: 35px;
+    font-size: 33px;
     text-shadow: 6px 6px 10px rgb(255, 255, 255);
 }
 
-.cgpa {
-    font-size: 20px;
+.edu-sunway p{
     font-family: "Fuzzy Bubbles", sans-serif;
-    padding: 10px;
-    padding-left: 0px;
+    font-size: 20px;
+    padding-top: 15px;
 }
 
 .ebutton {
@@ -265,21 +339,14 @@ footer {
     background-color: #e5e228;
     border-radius: 20px;
     box-shadow: 0 9px #986102;
-    margin: 60px;
-    margin-top: -30px;
+    margin: 0 0 50px 50px;
 }
 
 .ebutton:hover {
     background-color: #e37e03;
 }
 
-.ebutton:active {
-    background-color: hsl(10, 90%, 60%);
-    box-shadow: 0 5px #ffffff;
-    transform: translateY(4px);
-}
-
-.skills {
+.skills-container {
     padding: 50px;
     padding-top: 0px;
     display: grid;
@@ -290,38 +357,30 @@ footer {
     font-family: 'Times New Roman', Times, serif;
 }
 
-.analysis-visualization,
-.front-end-development {
+.skills {
     background-color: lightpink;
     border: 2px solid #000;
     padding: 20px;
     line-height: 30px;
     box-shadow: 4px 6px rgb(255, 246, 246);
+    border-radius: 20%;
 }
 
-.skill-title {
+.skills h2 {
     text-align: center;
     text-decoration: underline;
     text-decoration-style: dotted;
 }
 
-.skill-list {
+.skills ul li {
     background-color: lightpink;
     text-align: left;
     padding: 10px;
     list-style-type: none;
-    display: grid;
 }
-
-.image-girl {
-    width: 400px; 
-    height: auto;
-}
-
+/*end features*/
 /*Project page*/
-.project-header,
-.certification-header{
-    padding-top: 50px;
+.services h1, .about h1{
     text-align: center;
     text-shadow: 4px 4px 8px whitesmoke;
     font-family: "Moo Lah Lah", sans-serif;
@@ -329,6 +388,7 @@ footer {
     font-style: normal;
     font-size: 90px;
     animation: bounce 0.7s infinite;
+    padding-top: 10vh; 
 }
 
 @keyframes bounce {
@@ -345,15 +405,13 @@ footer {
     }
 }
 
-.project-description,
-.visualization-description,
-.carousel-description {
+.services h1 + p, .portfolio h1 + p, .carousel-description{
     padding: 30px;
     text-align: center;
     font-style: oblique;
 }
 
-.projects-container {
+.col {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 80px;
@@ -364,12 +422,12 @@ footer {
     justify-content: center;
 }
 
-.project-image {
+.col .srv img {
     width: 300px;
     height: 300px;
 }
 
-.project-title {
+.col .srv h2 {
     padding-top: 20px;
     font-family: "Workbench", sans-serif;
     font-optical-sizing: auto;
@@ -380,12 +438,26 @@ footer {
         "SCAN" 0;
 }
 
-.tech-stack {
+.col .srv p {
     font-style: italic;
 }
 
-.card{
-    border: 1px solid hsl(0%, 0%, 80%);
+
+
+.srv .tooltip {
+  display: inline-block;
+    position: absolute;
+    background-color: rgb(151, 149, 149);
+    color: black;
+    margin-left: 4px;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 6px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.col .card{
     border-radius: 10px;
     box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
     background-color:rgb(137, 166, 196);
@@ -396,42 +468,20 @@ footer {
     display: inline-block;
   }
   
-.card .card-image{
-    height: 150px;
-    width: 150px;
-    margin-bottom: 10px;
+.col .card img{
+    width: 13vw;
+    height: 20vh;
 }
-
-.card .card-title{
-    margin: 0;
-    color: hsl(0, 0%, 20%);
-}
-
-.card .card-text{
-    color: hsl(0, 0%, 30%);
-}
-
-.tooltip {
-    display: inline-block;
-    background-color: rgb(151, 149, 149);
-    color: black;
-    margin-top: 5px;
-    padding: 5px 10px;
-    font-size: 12px;
-    border-radius: 6px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-/*visualization section*/
-.visualization-header{
+/*end services*/
+/*start portfolio*/
+.portfolio h1{
     padding-top: 80px;
     text-align: center;
     font-family: "Faster One", system-ui;
     font-size: 60px;
 }
 
-.more-assignments{
+.info{
     margin-left: 250px;
     margin-right: 250px;
     padding: 40px;
@@ -451,21 +501,30 @@ footer {
 .tesla{
     height: 300px;
   }
-
-/*Certifications page*/
-.certification-image-container {
+/*end portfolio*/
+/*start about*/
+.certification-content {
     margin: 20px;
     display: flex;         
     align-items: flex-start;  
     gap: 20px;                
 }
 
-.certification-image {
+.certification-content img {
     padding: 20px;
-    max-width: 500px;         
+    max-width: 40vw;       
     overflow: visible;
     width: 100%;  
     height: auto;              
+}
+
+.deanlist {
+    padding: 20px;
+    max-width: 40vw;       
+    overflow: visible;
+    width: 100%;  
+    height: auto;   
+    height: 90vh;
 }
 
 .certification-details {
@@ -475,16 +534,25 @@ footer {
     gap: 10px;               
 }
 
-.deanlist{
-    height: 83vh;      
-}
-
-.certification-name{
+.certification-details h3{
     font-family: "Fuzzy Bubbles", sans-serif;
     font-size: 35px;
     text-shadow: 6px 6px 10px rgb(255, 255, 255);
 }
 
+/* End About */
+/* Start Footer */
+.footer {
+    background-color: #292929;
+    color: white;
+    padding: 30px 10px;
+    text-align: center;
+  }
+  .footer span {
+    font-weight: bold;
+    color: white;
+  }
+  /* End Footer */
 /*animation from left to right*/
 .hidden {
     opacity: 0;
