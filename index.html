@@ -2,67 +2,71 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
 
-    <!--font awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="Portfolio.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Freehand&family=Fuzzy+Bubbles:wght@400;700&family=Rubik+Gemstones&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Moo+Lah+Lah&family=Rubik+Bubbles&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Faster+One&family=Moo+Lah+Lah&family=Rubik+Bubbles&family=Rubik+Puddles&family=Workbench&display=swap"
       rel="stylesheet"
     />
-
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-
-    <link rel="stylesheet" href="Portfolio.css" />
+    <script src="https://cdn.jsdelivr.net/npm/wordcloud@1.2.3/src/wordcloud2.min.js"></script>
+    <script defer src="Portfolio.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
-    <!--header part-->
-    <nav class="navbar">
-      <ul>
-        <li class="logo"><h2>Suet Yan</h2></li>
+    <!-- Start Header -->
+    <div class="header">
+      <div class="container">
+        <h2 class="logo">Suet Yan</h2>
         <i id="mode" class="fa-solid fa-sun" style="color: #ffd43b"></i>
-        <li><a href="#About">About</a></li>
-        <li><a href="#Education">Education</a></li>
-        <li><a href="#Projects">Projects</a></li>
-        <li><a href="#Certifications">Certifications</a></li>
-      </ul>
-    </nav>
-
-    <!-- About page -->
+        <div class="links">
+          <span class="icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <ul>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Education">Education</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#Certifications">Certifications</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- End Header -->
+    <!-- Start Landing -->
     <section id="About">
       <div>
         <img class="profile-pic" src="myPhoto.jpeg" />
@@ -80,8 +84,7 @@
             innovative tech companies through my analytical expertise and
             dedication to creating seamless user experiences. Let’s discover how
             my unique blend of analytical skills and creativity can drive the
-            team’s success!! <br />👩🏻‍💻 I am seeking internship from 13 January
-            2025 to 31 March 2025. 👩🏻‍💻
+            team’s success! <br />
           </p>
         </div>
 
@@ -96,18 +99,19 @@
         </div>
 
         <div class="cvbutton">
-          <button class="dbutton" onclick="openPDF('Chang Suet Yan CV.pdf')">View Resume</button>
-          <button class="tbutton" onclick="openPDF('Ref_letter.pdf')">View Ref Letter</button>
+          <button class="dbutton" onclick="openPDF('Chang Suet Yan CV.pdf')">
+            View Resume
+          </button>
         </div>
       </div>
-
       <footer></footer>
     </section>
-
-    <!-- Education page -->
-    <section id="Education">
-      <div class="edu-project">
-        <h1 class="edu-title">Academic Background and Skills</h1>
+    
+    <!--End Landing-->
+    <!-- Start Features -->
+    <section id="Education" class="container">
+      <div class="feat">
+        <h1>Academic Background and Skills</h1>
         <br />
         <p class="edu-desc">
           Discover my educational pathway and competencies, emphasizing my
@@ -117,11 +121,11 @@
 
       <div>
         <div class="edu-sunway">
-          <h1 class="sunway-degree">
+          <h1>
             👩🏻‍🎓 Bachelor degree of Business Analytics (Honours) at Sunway
             University
           </h1>
-          <p class="cgpa">🌟 CGPA: 3.72 (First Class)</p>
+          <p>🌟 CGPA: 3.72 (First Class)</p>
         </div>
         <div>
           <button class="ebutton" onclick="openPDF('transcript.pdf')">
@@ -130,28 +134,11 @@
         </div>
       </div>
 
-      <div class="skills hidden">
-        <div class="analysis-visualization">
-          <h2 class="skill-title">Analysis & Visualization</h2>
+      <div class="skills-container hidden">
+        <div class="skills">
+          <h2>Web development</h2>
           <div>
-            <ul class="skill-list">
-              <li>IBM SPSS</li>
-              <li></li>
-              <li>Weka</li>
-              <li>R programming</li>
-              <li>RapidMiner</li>
-              <li>Power BI</li>
-              <li>Tableau</li>
-              <li>Python</li>
-              <li>SQL</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="front-end-development">
-          <h2 class="skill-title">Front-end development</h2>
-          <div>
-            <ul class="skill-list">
+            <ul>
               <li>HTML</li>
               <li>CSS</li>
               <li>Javascript</li>
@@ -162,19 +149,36 @@
           </div>
         </div>
 
-        <div>
-          <img class="image-girl" src="image3.png" />
+        <div class="skills">
+          <h2>Data Analysis & Visualization</h2>
+          <div>
+            <ul>
+              <li>Power BI</li>
+              <li>Tableau</li>
+            </ul>
+          </div>
         </div>
-      </div>
 
+        <div class="skills">
+          <h2>Programming & Scripting Languages</h2>
+          <div>
+            <ul>
+              <li>VBA</li>
+              <li>Python</li>
+              <li>SQL</li>
+              <li>R programming</li>
+            </ul>
+          </div>
+        </div>
+  
       <footer></footer>
     </section>
-
-    <!--Project page-->
-    <section id="Projects">
-      <div>
-        <h1 class="project-header">Welcome to My Project Portfolio!</h1>
-        <p class="project-description">
+    <!-- End Features -->
+    <!--Start services-->
+    <section id="Projects" class="container">
+      <div class="services">
+        <h1>Welcome to My Project Portfolio!</h1>
+        <p>
           This section highlights small projects I have developed using tools
           like HTML, CSS, JavaScript, and React.js. These projects demonstrate
           my skills in front-end development, problem-solving and creating
@@ -182,12 +186,12 @@
         </p>
       </div>
 
-      <div class="projects-container hidden">
-        <div class="project">
-          <img class="project-image" src="Rock Paper Scissors.png" />
-          <h2 class="project-title">Rock Paper Scissors</h2>
+      <div class="col hidden">
+        <div class="srv">
+          <img src="Rock Paper Scissors.png" />
+          <h2>Rock Paper Scissors</h2>
           <br />
-          <p class="tech-stack">HTML, CSS, Javascript</p>
+          <p>HTML, CSS, Javascript</p>
           <br />
           <div>
             <a
@@ -200,11 +204,11 @@
           </div>
         </div>
 
-        <div class="project">
-          <img class="project-image" src="flappyBirdPhoto.png" />
-          <h2 class="project-title">Flappy Bird</h2>
+        <div class="srv">
+          <img src="flappyBirdPhoto.png" />
+          <h2>Flappy Bird</h2>
           <br />
-          <p class="tech-stack">HTML, CSS, Javascript</p>
+          <p>HTML, CSS, Javascript</p>
           <br />
           <div>
             <a
@@ -217,11 +221,11 @@
           </div>
         </div>
 
-        <div class="project">
-          <img class="project-image" src="calculator.png" />
-          <h2 class="project-title">Calculator</h2>
+        <div class="srv">
+          <img src="calculator.png" />
+          <h2>Calculator</h2>
           <br />
-          <p class="tech-stack">HTML, CSS, Javascript</p>
+          <p>HTML, CSS, Javascript</p>
           <br />
           <div>
             <a
@@ -234,11 +238,11 @@
           </div>
         </div>
 
-        <div class="project card">
-          <img class="project-image card-image" src="ToDoList.png" />
-          <h2 class="project-title card-title">To-do-list</h2>
+        <div class="srv card">
+          <img src="ToDoList.png" />
+          <h2>To-do-list</h2>
           <br />
-          <p class="tech-stack card-text">React.js</p>
+          <p>React.js</p>
           <br />
           <div>
             <a
@@ -251,11 +255,11 @@
           </div>
         </div>
 
-        <div class="project card">
-          <img class="project-image card-image" src="Stopwatch.png" />
-          <h2 class="project-title card-title">Stopwatch</h2>
+        <div class="srv card">
+          <img src="Stopwatch.png" />
+          <h2>Stopwatch</h2>
           <br />
-          <p class="tech-stack card-text">React.js</p>
+          <p>React.js</p>
           <br />
           <div>
             <a
@@ -268,10 +272,13 @@
           </div>
         </div>
       </div>
-
-      <div>
-        <h1 class="visualization-header">Visualization</h1>
-        <p class="visualization-description">
+    </section>
+ <!--End services-->
+  <!--Start portfolio-->
+  <div class="portfolio">
+      <div class="container">
+        <h1>Visualization</h1>
+        <p>
           This showcases a series of assignments where I've applied advanced
           analytics techniques to provide actionable insights for strategic
           decision-making, demonstrating my proficiency as a business analytics
@@ -309,7 +316,8 @@
 
           <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="10000">
-              <iframe class="carousel-image"
+              <iframe
+                class="carousel-image"
                 title="Chang Suet Yan_22016521"
                 width="600"
                 height="373.5"
@@ -342,8 +350,8 @@
             </div>
 
             <div class="carousel-item">
-              <div class="more-assignments">
-                <h2>More Assignment</h2>
+              <div class="info">
+                <h3>More Assignment</h3>
                 <br />
                 <p>
                   Web & Social Media Analytic Assignment: Perform Sentiment
@@ -351,7 +359,8 @@
                   deliver crucial insights into consumer perceptions about Tesla
                   Model 3 using <b>Python and NodeXL</b>.
                 </p>
-                 <iframe class="tesla" src="Tesla.pdf" frameborder="0"></iframe><br>
+                <iframe class="tesla" src="Tesla.pdf" frameborder="0"></iframe
+                ><br />
                 <a
                   href="https://imailsunwayedu-my.sharepoint.com/:w:/r/personal/22016521_imail_sunway_edu_my/Documents/BBA/Y3S1/Web%20%26%20Social%20Media%20Analytic/Assignment/Ind%20Assign%203/Chang%20Suet%20Yan_22016521.docx?d=wf9b38ddd19014679906a483d1248e30b&csf=1&web=1&e=wX2csg"
                   class="btn btn-primary"
@@ -395,22 +404,21 @@
           </button>
         </div>
       </div>
-      <footer></footer>
-    </section>
-
-
-    <!--Certification page-->
-    <section id="Certifications">
-      <h1 class="certification-header">Certificates</h1>
-      <div class="certfication-container">
-        <div class="certification-image-container">
+    </div>
+  <!--End Portfolio-->
+<!--start about-->
+    <section id="Certifications" class="container">
+      <div class="about">
+      <h1>Certificates</h1>
+      
+      <div>
+        <div class="certification-content">
           <img
             src="GoogleHackathon.png"
-            class="certification-image"
             alt="Google Hackathon Certificate"
           />
           <div class="certification-details">
-            <h3 class="certification-name"><u>Google Hackathon 2024</u></h3>
+            <h3><u>Google Hackathon 2024</u></h3>
             <p>
               Leveraging Google Forms, Google Sheets, and Google Apps Script to
               streamline the finance department's claim process: Employees fill
@@ -425,25 +433,30 @@
               >View Certificate</a
             >
           </div>
+          </div>
         </div>
 
-        <div class="certification-image-container">
-          <iframe class="certification-image deanlist" src="DeanList.pdf" frameborder="0"></iframe>
+        <div class="certification-content">
+          <iframe
+            class="deanlist"
+            src="DeanList.pdf"
+            frameborder="0"
+          ></iframe>
           <div class="certification-details">
-            <h3 class="certification-name"><u>Dean's List Award</u></h3>
+            <h3><u>Dean's List Award</u></h3>
             <p>
-              Awarded for achieving a  high GPA during the April 2024 semester, recognizing dedication and academic excellence.
+              Awarded for achieving a high GPA during the April 2024 semester,
+              recognizing dedication and academic excellence.
             </p>
           </div>
         </div>
       </div>
-    </section>
-
-    <script defer src="Portfolio.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+      </section>
+<!-- End About -->
+      <!-- Start Footer -->
+      <div class="footer">
+        &copy; 2024 <span>Suet Yan</span> All Right Reserved | Contact Me: <u>changsuetyan23@gmail.com</u>
+      </div>
+      <!-- End Footer -->
   </body>
 </html>
