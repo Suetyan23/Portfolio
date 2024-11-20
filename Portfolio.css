@@ -142,47 +142,21 @@ footer {
       width: 100%;
     }
   
-    .header .links ul {
-      display: flex; 
-           position: absolute;
+   .header .links ul {
+      display: none; /* Hide menu by default */
       flex-direction: column;
+      position: absolute;
       top: calc(100% + 15px);
       right: 0;
       min-width: 200px;
       background-color: #333;
       z-index: 1;
     }
-  
-    .header .links ul::before {
-      content: "";
-           position: absolute;
-      right: 5px;
-      top: -10px;
-      border-width: 10px;
-      border-style: solid;
-      border-color: transparent transparent #333 transparent;
+    
+    .header .links.menu-open ul {
+      display: flex; /* Show menu when `menu-open` class is applied */
     }
   
-    .header .links:active ul {
-      display: block;
-    }
-  
-    .header .links ul li a {
-      padding: 15px;
-      color: #ddd;
-      border-bottom: 1px solid #ddd;
-    }
-  
-    .header .links ul li a:last-child {
-      border-bottom: none;
-    }
-  
-    .header .links ul li a:hover {
-      color: lightpink;
-      padding-left: 25px;
-      text-decoration: underline;
-    }
-  }
 
   
  /* end header */
