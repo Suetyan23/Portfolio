@@ -32,6 +32,7 @@ function openPDF(fileName) {
     window.location.href = fileName;
 }
 
+
 // typing animation where each character of the text in the element with the class name fades in one by one.
 document.addEventListener("DOMContentLoaded", function () {
     const text = document.querySelector('.name');
@@ -62,7 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-
 //animation from left to right
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -77,11 +77,12 @@ const observer = new IntersectionObserver((entries) => {
 let hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
-let projects = document.querySelectorAll('.project');
 
-projects.forEach(project => {
-    let gitHubIcon = project.querySelector('.fa-github');
-    let gitHubTooltip = project.querySelector('.tooltip');
+let srvs = document.querySelectorAll('.srv');
+
+srvs.forEach(srv => {
+    let gitHubIcon = srv.querySelector('.fa-github');
+    let gitHubTooltip = srv.querySelector('.tooltip');
 
     // Add event listeners to show/hide the tooltip
     gitHubIcon.addEventListener('mouseenter', () => {
@@ -92,3 +93,5 @@ projects.forEach(project => {
         gitHubTooltip.style.opacity = '0';
     });
 });
+
+
