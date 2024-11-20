@@ -163,7 +163,7 @@ footer {
       border-color: transparent transparent #333 transparent;
     }
   
-    .header .links:hover ul {
+    .header .links:active ul {
       display: block;
     }
   
