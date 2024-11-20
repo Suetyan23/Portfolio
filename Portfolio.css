@@ -143,8 +143,8 @@ footer {
     }
   
     .header .links ul {
-      display: none; /* Hidden by default */
-      flex-direction: column; /* Stack links vertically */
+      display: block; 
+      flex-direction: column;
       position: absolute;
       top: calc(100% + 15px);
       right: 0;
