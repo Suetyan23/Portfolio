@@ -28,7 +28,7 @@ p {
     font-size: large;
 }
 
-/*header part*/
+/* start header*/
 .navbar {
     padding: 0;
     font-family: 'Times New Roman', Times, serif;
@@ -39,10 +39,11 @@ p {
     z-index: 1;
 }
 
+
 .logo {
     color: white;
-    padding: 10px;
-    margin-left: 30px;
+    padding: 0.625rem;
+    margin-left: 1.875rem;
     text-align: left;
     float: left;
     font-family: "Freehand", cursive;
@@ -78,26 +79,96 @@ p {
     color: pink;
 }
 
-/*About page*/
+.dropdown:hover .dropdown-content {
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(120, 120, 120);
+    box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    z-index: 10;
+  }
+  
+  .dropdown-content li {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .dropdown-content li a {
+    display: block; 
+    padding: 10px 15px; 
+    color: white; 
+    text-align: left;
+    text-decoration: none; 
+    width: 100%; 
+    box-sizing: border-box; 
+    transition: background-color 0.3s ease; 
+}
+  
+  .dropdown-content li a:hover {
+    background-color: #000000;
+    color: orange;
+  }
+
+  .dropdown-content li a:active {
+    color: pink;
+}
+/* end header*/
+
+/*start About*/
+/* start About */
+.about {
+    padding: 10% 6% 0% 6%; 
+    display: grid;
+    grid-template-columns: 40% 60%; 
+    gap: 2rem; 
+    align-items: center; 
+}
+
 .profile-pic {
-    border-radius: 100px;
-    width: 35%;
-    margin-top: 60px;
-    padding: 50px;
-    float: left;
+    border-radius: 20%;    
+    width: 80%;           
+    height: 100%;         
+    display: block;   
+    float: left;     
 }
 
 .site-home {
-    float: right;
-    width: 60%;
-    margin-left: 50px;
-    margin-top: 160px;
+    width: 100%;               
+}
+
+@media (max-width: 768px) {
+    .about {
+        grid-template-columns: 1fr;  
+}
+    .profile-pic{
+        border-radius: 10%;    
+        width: 60%;  
+        height: auto;      
+    }
+}
+
+@media (max-width: 480px) {
+    .about {
+        grid-template-columns: 1fr; 
+    }
+    .profile-pic{
+        border-radius: 3%;    
+        width: 60%;  
+        height: auto;      
+    }
 }
 
 .hi-emoji {
     display: inline-block;
     animation: wave 1s infinite;
-    transform-origin: 70% 70%; /* Adjusting to make the waving more natural */
+    transform-origin: 70% 70%; 
   }
 
   @keyframes wave {
@@ -180,38 +251,167 @@ a:active {
     transform: translateY(4px);
 }
 
-.tbutton{
-    font-size: 24px;
-    cursor: pointer;
-    color: #fff;
-    background-color: #75bff4;
-    border-radius: 20px;
-    box-shadow: 0 9px #05136a;
-    margin-left: 50px;
-}
-
-.tbutton:hover {
-    background-color: #3414b5;
-}
-
-.tbutton:active {
-    background-color: hsl(244, 75%, 76%);
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-}
-
 footer {
     visibility: hidden;
     clear: both;
 }
+/*end About*/
 
-/*Education page*/
-.edu-project {
-    padding: 50px;
-    padding-top: 80px;
+/* start Experience */
+#Experience {
+    padding: 50px 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-out;
 }
 
-.edu-title{
+.experience-header,
+.project-header,
+.certification-header{
+    padding-top: 60px;
+    text-align: center;
+    text-shadow: 4px 4px 8px whitesmoke;
+    font-family: "Moo Lah Lah", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 90px;
+    animation: bounce 0.7s infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    border-left: 4px solid #424649;
+    animation: slideIn 0.5s ease-out;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: scale(1.05);
+}
+
+.timeline-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+}
+
+.timeline-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    transform: translateX(-50%);
+}
+
+.timeline-content {
+    background-color: #fff;
+    border: 2px solid #2980b9;
+    padding: 25px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.experience-name {
+    font-size: 24px;
+    color: #2980b9;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.timeline-content h5 {
+    font-size: 18px;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+}
+
+.timeline-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    text-align: left;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .timeline-item {
+        flex-direction: column;
+        align-items: center;
+    }
+    .timeline-image {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .timeline-line {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .timeline-content {
+        max-width: 90%;
+    }
+}
+/* end Experience */
+
+/*start Education*/
+#Education {
+    padding: 50px 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+}
+
+.edu-header{
     text-align: center;
     text-shadow: 4px 4px 8px whitesmoke;
     font-family: "Moo Lah Lah", sans-serif;
@@ -220,7 +420,8 @@ footer {
     font-size: 90px;
 }
 
-.edu-desc {
+.edu-desc, .project-desc {
+    margin: 0 40px;
     padding: 20px;
     text-align: center;
     font-style: oblique;
@@ -229,7 +430,9 @@ footer {
 }
 
 .edu-sunway {
+    margin-top: 50px;
     padding: 0 50px 30px;
+    text-align: left;
     animation: pulse 2.5s infinite;
 }
 
@@ -259,6 +462,7 @@ footer {
 }
 
 .ebutton {
+    float: left;
     font-size: 24px;
     cursor: pointer;
     color: #fff;
@@ -279,72 +483,78 @@ footer {
     transform: translateY(4px);
 }
 
-.skills {
-    padding: 50px;
-    padding-top: 0px;
+.skills-container { 
+    margin: 5% 5% 10%;
+    float: left;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 40px;
-    row-gap: 40px;
+    column-gap: 5%;
     color: black;
     font-family: 'Times New Roman', Times, serif;
 }
 
-.analysis-visualization,
-.front-end-development {
+.skills {
     background-color: lightpink;
     border: 2px solid #000;
     padding: 20px;
     line-height: 30px;
     box-shadow: 4px 6px rgb(255, 246, 246);
+    border-radius: 20%;
 }
 
-.skill-title {
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  .skills-container {
+    grid-template-columns: 1fr 1fr; 
+    row-gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-container {
+    grid-template-columns: 1fr; 
+    row-gap: 30px; 
+  }
+}
+
+.skills h2 {
     text-align: center;
     text-decoration: underline;
     text-decoration-style: dotted;
 }
 
-.skill-list {
+.skills ul li {
     background-color: lightpink;
     text-align: left;
     padding: 10px;
     list-style-type: none;
-    display: grid;
 }
+/*end skills*/
 
-.image-girl {
-    width: 400px; 
-    height: auto;
-}
-
-/*Project page*/
-.project-header,
-.certification-header{
-    padding-top: 50px;
+/*start Project */
+#Projects {
+    margin-top: 500px;
+    padding: 50px 20px;
     text-align: center;
-    text-shadow: 4px 4px 8px whitesmoke;
-    font-family: "Moo Lah Lah", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 90px;
-    animation: bounce 0.7s infinite;
+    animation: fadeIn 1s ease-out;
 }
 
-@keyframes bounce {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-20px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
+.capstone-description{
+    margin: 0 30%;
+    text-align: center;
+    background-color: #4e85dd;
+    border-radius: 30px;
+    padding: 20px;
+    
 }
 
+.capstone-description a{
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+  /*end Capstone*/
+
+/*start viz*/
 .project-description,
 .visualization-description,
 .carousel-description {
@@ -353,20 +563,61 @@ footer {
     font-style: oblique;
 }
 
-.projects-container {
+.visualization-header{
+    padding-top: 80px;
+    text-align: center;
+    font-family: "Faster One", system-ui;
+    font-size: 60px;
+}
+
+.more-assignments{
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 5%;
+    border: 2px solid #383636; 
+    border-radius: 40px; 
+    background-color: #faf9d3;
+    color: black;
+}
+
+
+.carousel-image {
+    width: 70vw;
+    height: 70vh;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .carousel-item, .project{
+    text-align: left;
+  }
+
+.tesla-container {
+    width: 40%;  
+    height: 30vh; 
+    max-width: 100%;
+}
+
+.tesla {       
+    width: 100%;  
+    height: 100%; 
+    border: none; 
+}
+/*end viz*/
+
+/*start frontend*/
+.project-container {
+    margin: 0 auto 0 auto;
+    padding: 5%; 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 80px;
-    row-gap: 80px;
-    padding: 300px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    justify-content: center;
+    gap: 2vw;   
+    justify-content: center;  
 }
 
 .project-image {
-    width: 300px;
-    height: 300px;
+    width: 20vw;
+    height: 35vh;
 }
 
 .project-title {
@@ -422,68 +673,44 @@ footer {
     opacity: 0;
     transition: opacity 0.3s ease;
 }
+/*end frontend*/
 
-/*visualization section*/
-.visualization-header{
-    padding-top: 80px;
-    text-align: center;
-    font-family: "Faster One", system-ui;
-    font-size: 60px;
-}
-
-.more-assignments{
-    margin-left: 250px;
-    margin-right: 250px;
-    padding: 40px;
-    border: 2px solid #383636; 
-    border-radius: 40px; 
-    background-color: #faf9d3;
-    color: black;
-}
-
-.carousel-image {
-    width: 70vw;
-    height: 70vh;
-    display: block;
-    margin: 0 auto;
-  }
-
-.tesla{
-    height: 300px;
-  }
-
-/*Certifications page*/
-.certification-image-container {
-    margin: 20px;
-    display: flex;         
-    align-items: flex-start;  
-    gap: 20px;                
-}
-
-.certification-image {
-    padding: 20px;
-    max-width: 500px;         
-    overflow: visible;
-    width: 100%;  
-    height: auto;              
-}
-
-.certification-details {
-    margin-top: 90px;
-    display: flex;
-    flex-direction: column;   
-    gap: 10px;               
-}
-
-.deanlist{
-    height: 83vh;      
-}
-
+/*start certification*/
 .certification-name{
     font-family: "Fuzzy Bubbles", sans-serif;
     font-size: 35px;
     text-shadow: 6px 6px 10px rgb(255, 255, 255);
+    padding: 40px 40px 0;
 }
+
+.certification-image-container {
+    margin: 0 auto 0 auto;
+    padding: 5%; 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 2vw;             
+}
+
+.certification-image {
+    width: 100%;  
+    height: auto;              
+}
+
+.google-certification-image {
+    width: 100%;
+    height: auto;
+}
+
+.deanlist{
+    width: 70%;  
+    height: 70vh;
+}
+
+.certification-image:hover {
+    transform: scale(1.3);
+  }
+  
+/*end certification*/
 
 /*animation from left to right*/
 .hidden {
@@ -504,3 +731,7 @@ footer {
         transition: none;
     }
 }
+
+
+
+
