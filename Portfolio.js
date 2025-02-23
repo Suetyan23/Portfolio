@@ -27,7 +27,7 @@ button.addEventListener('click', function () {
 });
 button.click();
 
-//view resume and ref letter
+//view resume 
 function openPDF(fileName) {
     window.location.href = fileName;
 }
