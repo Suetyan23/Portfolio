@@ -53,7 +53,8 @@
     <!--start header-->
     <nav class="navbar">
       <ul>
-        <li class="logo"><h2>Suet Yan</h2></li>
+        <li class="logo" onclick="goToAbout()"> <h2>Suet Yan</h2> </li>
+        <ul class="nav-links">
         <i id="mode" class="fa-solid fa-sun" style="color: #ffd43b"></i>
         <li><a href="#About">About</a></li>
         <li><a href="#Experience">Experience</a></li>
@@ -70,6 +71,12 @@
         </li>
         <li><a href="#Certifications">Certifications</a></li>
       </ul>
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </nav>
     <!--end header-->
 
@@ -135,6 +142,7 @@
               testing, ensuring clear communication and providing specifications
               for test cases. I also conduct testing to ensure IT projects meet
               expectations.
+              <br>Tools: JIRA
             </p>
           </div>
         </div>
@@ -457,8 +465,7 @@
           <img class="project-image card-image" src="image/ToDoList.png" />
           <h2 class="project-title card-title">To-do-list</h2>
           <br />
-          <p class="tech-stack card-text">React.js</p>
-          <br />
+          <p class="tech-stack card-text">React.js</p><br>
           <div>
             <a
               href="https://github.com/Suetyan23/React.js/tree/main/my-react-app/src/ToDoList"
@@ -474,8 +481,7 @@
           <img class="project-image card-image" src="image/Stopwatch.png" />
           <h2 class="project-title card-title">Stopwatch</h2>
           <br />
-          <p class="tech-stack card-text">React.js</p>
-          <br />
+          <p class="tech-stack card-text">React.js</p><br>
           <div>
             <a
               href="https://github.com/Suetyan23/React.js/blob/main/my-react-app/src/Stopwatch.jsx"
@@ -536,7 +542,6 @@
         <div class="certification-container">
           <h3 class="certification-name"><u>> Dean's List Award</u></h3>
           <div class="certification-image-container">
-           <img src="image/DeanList1.png" alt="" class="certification-image">
            <img src="image/DeanList1.png" alt="" class="certification-image">
               <p>
                 Awarded for achieving a high GPA,
