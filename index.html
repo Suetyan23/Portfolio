@@ -50,23 +50,33 @@
   </head>
 
   <body>
-    <!--header part-->
+    <!--start header-->
     <nav class="navbar">
       <ul>
         <li class="logo"><h2>Suet Yan</h2></li>
         <i id="mode" class="fa-solid fa-sun" style="color: #ffd43b"></i>
         <li><a href="#About">About</a></li>
+        <li><a href="#Experience">Experience</a></li>
         <li><a href="#Education">Education</a></li>
-        <li><a href="#Projects">Projects</a></li>
+        <li class="dropdown">
+          <a href="#Projects">Projects</a>
+          <ul class="dropdown-content">
+            <li><a href="#capstone">Capstone Project</a></li>
+            <li>
+              <a href="#visualization">Visualization Assignment</a>
+            </li>
+            <li><a href="#frontend">Frontend Development</a></li>
+          </ul>
+        </li>
         <li><a href="#Certifications">Certifications</a></li>
       </ul>
     </nav>
+    <!--end header-->
 
-    <!-- About page -->
+    <!-- start About -->
     <section id="About">
-      <div>
-        <img class="profile-pic" src="myPhoto.jpeg" />
-      </div>
+      <div class="about">
+        <img class="profile-pic" src="image/myPhoto.jpeg" />
 
       <div class="site-home">
         <div>
@@ -80,13 +90,12 @@
             innovative tech companies through my analytical expertise and
             dedication to creating seamless user experiences. Let’s discover how
             my unique blend of analytical skills and creativity can drive the
-            team’s success! <br />👩🏻‍💻 I am seeking internship from 13 January
-            2025 to 31 March 2025. 👩🏻‍💻
+            team’s success!
           </p>
         </div>
 
         <div>
-          <img class="linkedIn-image" src="linkedin.png" alt="linkedin" />
+          <img class="linkedIn-image" src="image/linkedin.png" alt="linkedin" />
           <a
             class="linkedin"
             href="https://www.linkedin.com/in/suet-yan-chang-557995245/"
@@ -99,20 +108,44 @@
           <button class="dbutton" onclick="openPDF('Chang Suet Yan CV.pdf')">
             View Resume
           </button>
-          <button class="tbutton" onclick="openPDF('Ref_letter.pdf')">
-            View Ref Letter
-          </button>
         </div>
       </div>
 
       <footer></footer>
     </section>
+    <!-- end About -->
 
-    <!-- Education page -->
+    <!-- start Experience -->
+    <section id="Experience">
+      <h1 class="experience-header">Experience</h1>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-image">
+            <img src="image/ifast.png" alt="iFast Logo" />
+          </div>
+
+          <div class="timeline-content">
+            <h3 class="experience-name"><u>iFast Project Analyst Intern</u></h3>
+            <h5>13 January 2025 - 4 April 2025</h5>
+            <p>
+              As a Project Analyst Intern at iFast, I assist the Project Manager
+              and Business Owner by gathering and analyzing user requirements,
+              documenting business and system processes, and collaborating with
+              the IT team. I participate in IT system planning, design, and
+              testing, ensuring clear communication and providing specifications
+              for test cases. I also conduct testing to ensure IT projects meet
+              expectations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end Experience -->
+
+    <!-- start Education -->
     <section id="Education">
-      <div class="edu-project">
-        <h1 class="edu-title">Academic Background and Skills</h1>
-        <br />
+      <div>
+        <h1 class="edu-header">Academic Background and Skills</h1>
         <p class="edu-desc">
           Discover my educational pathway and competencies, emphasizing my
           proficiency in business analytics and data-driven decision-making.
@@ -125,7 +158,7 @@
             👩🏻‍🎓 Bachelor degree of Business Analytics (Honours) at Sunway
             University
           </h1>
-          <p class="cgpa">🌟 CGPA: 3.72 (First Class)</p>
+          <p class="cgpa">🌟 CGPA: 3.74 (First Class)</p>
         </div>
         <div>
           <button class="ebutton" onclick="openPDF('transcript.pdf')">
@@ -134,28 +167,11 @@
         </div>
       </div>
 
-      <div class="skills hidden">
-        <div class="analysis-visualization">
-          <h2 class="skill-title">Analysis & Visualization</h2>
+      <div class="skills-container hidden">
+        <div class="skills">
+          <h2>Web development</h2>
           <div>
-            <ul class="skill-list">
-              <li>IBM SPSS</li>
-              <li></li>
-              <li>Weka</li>
-              <li>R programming</li>
-              <li>RapidMiner</li>
-              <li>Power BI</li>
-              <li>Tableau</li>
-              <li>Python</li>
-              <li>SQL</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="front-end-development">
-          <h2 class="skill-title">Front-end development</h2>
-          <div>
-            <ul class="skill-list">
+            <ul>
               <li>HTML</li>
               <li>CSS</li>
               <li>Javascript</li>
@@ -166,115 +182,83 @@
           </div>
         </div>
 
-        <div>
-          <img class="image-girl" src="image3.png" />
+        <div class="skills">
+          <h2>Data Analysis & Visualization</h2>
+          <div>
+            <ul>
+              <li>Power BI</li>
+              <li>Tableau</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="skills">
+          <h2>Programming & Scripting Languages</h2>
+          <div>
+            <ul>
+              <li>VBA</li>
+              <li>Python</li>
+              <li>SQL</li>
+              <li>R programming</li>
+            </ul>
+          </div>
         </div>
       </div>
-
-      <footer></footer>
     </section>
+    <!--End Education-->
 
-    <!--Project page-->
+    <!--start Project-->
     <section id="Projects">
+      <h1 class="project-header">Welcome to My Project Portfolio!</h1>
+      <p class="project-desc">
+        Explore my projects highlighting skills in data visualization, web
+        development, and problem-solving. Each reflects my commitment to
+        impactful solutions and value creation.
+      </p>
+
+      <!--capstone-->
       <div>
-        <h1 class="project-header">Welcome to My Project Portfolio!</h1>
+        <h1 class="visualization-header" id="capstone">1. Capstone Project</h1>
         <p class="project-description">
-          This section highlights small projects I have developed using tools
-          like HTML, CSS, JavaScript, and React.js. These projects demonstrate
-          my skills in front-end development, problem-solving and creating
-          practical solutions, reflecting my passion for coding and learning.
+          This project aims to improve MECAS's financial reporting by
+          transitioning from manual Excel workflows to an automated, real-time
+          dashboard system using Microsoft Power BI to offer dynamic
+          visualizations and drill-down capabilities.
+          <a
+            href=" https://imailsunwayedu-my.sharepoint.com/:w:/g/personal/22016521_imail_sunway_edu_my/EUVrdEmrxkNGhM1HBP0Ttu8BxtIuv94OY6Elzg1vYUFFoQ?e=mt999b"
+            target="_blank"
+            >Visit Assignment</a
+          >
+        </p>
+
+        <iframe
+          class="carousel-image"
+          title="MECAS- Final Dashboard"
+          width="600"
+          height="373.5"
+          src="https://app.powerbi.com/view?r=eyJrIjoiZGU2MzU2MTktOTcyYS00MmJkLThkNDctNWI1YWU3OTMwMmExIiwidCI6IjUzN2MyYmUxLWZjZDQtNDVhOS04M2IzLTY2NTNlYWNjNTA3MCIsImMiOjEwfQ%3D%3D"
+          frameborder="0"
+          allowfullscreen="true"
+        ></iframe
+        ><br /><br />
+
+        <p class="capstone-description">
+          Check out this insightful post by
+          <a
+            href="https://www.linkedin.com/posts/sunwaysbs_sunway-50yearsofcommitment-sunwayuniversity-activity-7283037933400432641--z1J?utm_source=share&utm_medium=member_desktop"
+            target="_blank"
+            >Sunway University</a
+          >
+          on LinkedIn
         </p>
       </div>
 
-      <div class="projects-container hidden">
-        <div class="project">
-          <img class="project-image" src="Rock Paper Scissors.png" />
-          <h2 class="project-title">Rock Paper Scissors</h2>
-          <br />
-          <p class="tech-stack">HTML, CSS, Javascript</p>
-          <br />
-          <div>
-            <a
-              href="https://github.com/Suetyan23/My-Portfolio/tree/main/Rock%20Paper%20Scissors"
-              target="_blank"
-            >
-              <i id="gitHubIcon" class="fa-brands fa-github fa-spin fa-xl"></i
-            ></a>
-            <div class="tooltip" id="gitHubTooltip">Rock Paper Scissors.</div>
-          </div>
-        </div>
-
-        <div class="project">
-          <img class="project-image" src="flappyBirdPhoto.png" />
-          <h2 class="project-title">Flappy Bird</h2>
-          <br />
-          <p class="tech-stack">HTML, CSS, Javascript</p>
-          <br />
-          <div>
-            <a
-              href="https://github.com/Suetyan23/My-Portfolio/tree/main/Flappy%20bird"
-              target="_blank"
-            >
-              <i class="fa-brands fa-github fa-spin fa-xl"></i
-            ></a>
-            <div class="tooltip">Flappy Bird.</div>
-          </div>
-        </div>
-
-        <div class="project">
-          <img class="project-image" src="calculator.png" />
-          <h2 class="project-title">Calculator</h2>
-          <br />
-          <p class="tech-stack">HTML, CSS, Javascript</p>
-          <br />
-          <div>
-            <a
-              href="https://github.com/Suetyan23/My-Portfolio/blob/main/Exercise/calculator.html"
-              target="_blank"
-            >
-              <i class="fa-brands fa-github fa-spin fa-xl"></i
-            ></a>
-            <div class="tooltip">Calculator html.</div>
-          </div>
-        </div>
-
-        <div class="project card">
-          <img class="project-image card-image" src="ToDoList.png" />
-          <h2 class="project-title card-title">To-do-list</h2>
-          <br />
-          <p class="tech-stack card-text">React.js</p>
-          <br />
-          <div>
-            <a
-              href="https://github.com/Suetyan23/React.js/tree/main/my-react-app/src/ToDoList"
-              target="_blank"
-            >
-              <i class="fa-brands fa-github fa-spin fa-xl"></i
-            ></a>
-            <div class="tooltip">To-do-list.</div>
-          </div>
-        </div>
-
-        <div class="project card">
-          <img class="project-image card-image" src="Stopwatch.png" />
-          <h2 class="project-title card-title">Stopwatch</h2>
-          <br />
-          <p class="tech-stack card-text">React.js</p>
-          <br />
-          <div>
-            <a
-              href="https://github.com/Suetyan23/React.js/blob/main/my-react-app/src/Stopwatch.jsx"
-              target="_blank"
-            >
-              <i class="fa-brands fa-github fa-spin fa-xl"></i
-            ></a>
-            <div class="tooltip">Stopwatch.</div>
-          </div>
-        </div>
-      </div>
+      <!--Visualization-->
 
       <div>
-        <h1 class="visualization-header">Visualization</h1>
+        <h1 class="visualization-header" id="visualization">
+          2. Visualization Assignment
+        </h1>
         <p class="visualization-description">
           This showcases a series of assignments where I've applied advanced
           analytics techniques to provide actionable insights for strategic
@@ -318,7 +302,7 @@
                 title="Chang Suet Yan_22016521"
                 width="600"
                 height="373.5"
-                src="https://app.powerbi.com/view?r=eyJrIjoiYmJjN2FlMTctMjAwMS00YWQxLWFiYzYtMDQyZjAzM2IwY2FmIiwidCI6IjUzN2MyYmUxLWZjZDQtNDVhOS04M2IzLTY2NTNlYWNjNTA3MCIsImMiOjEwfQ%3D%3D"
+                src="https://app.powerbi.com/view?r=eyJrIjoiN2I5M2UxN2QtYTUwNS00MjkwLThkN2UtZDU1ZjlmNWNjYmMyIiwidCI6IjUzN2MyYmUxLWZjZDQtNDVhOS04M2IzLTY2NTNlYWNjNTA3MCIsImMiOjEwfQ%3D%3D"
                 frameborder="0"
                 allowfullscreen="true"
               ></iframe>
@@ -333,7 +317,7 @@
             </div>
 
             <div class="carousel-item" data-bs-interval="2000">
-              <img class="carousel-image" src="Tableau.png" />
+              <img class="carousel-image" src="image/Tableau.png" />
               <div>
                 <p class="carousel-description">
                   Utilize <b>Tableau</b> to indentify trends and customer
@@ -356,8 +340,10 @@
                   deliver crucial insights into consumer perceptions about Tesla
                   Model 3 using <b>Python and NodeXL</b>.
                 </p>
-                <iframe class="tesla" src="Tesla.pdf" frameborder="0"></iframe
-                ><br />
+                <div class="tesla-container">
+                  <embed class="tesla" src="Tesla.pdf" type="application/pdf" />
+                </div>
+                <br />
                 <a
                   href="https://imailsunwayedu-my.sharepoint.com/:w:/r/personal/22016521_imail_sunway_edu_my/Documents/BBA/Y3S1/Web%20%26%20Social%20Media%20Analytic/Assignment/Ind%20Assign%203/Chang%20Suet%20Yan_22016521.docx?d=wf9b38ddd19014679906a483d1248e30b&csf=1&web=1&e=wX2csg"
                   class="btn btn-primary"
@@ -401,53 +387,167 @@
           </button>
         </div>
       </div>
-      <footer></footer>
-    </section>
 
-    <!--Certification page-->
-    <section id="Certifications">
-      <h1 class="certification-header">Certificates</h1>
-      <div class="certfication-container">
-        <div class="certification-image-container">
-          <img
-            src="GoogleHackathon.png"
-            class="certification-image"
-            alt="Google Hackathon Certificate"
-          />
-          <div class="certification-details">
-            <h3 class="certification-name"><u>Google Hackathon 2024</u></h3>
-            <p>
-              Leveraging Google Forms, Google Sheets, and Google Apps Script to
-              streamline the finance department's claim process: Employees fill
-              out the details in a Google Form, which automatically logs and
-              updates the data in a linked Google Sheet. Additionally, Google
-              Apps Script is used to manage the storage of receipt images in
-              Google Drive.
-            </p>
+      <!--frontend-->
+      <div>
+        <h1 class="visualization-header" id="frontend">
+          3. Frontend Development
+        </h1>
+        <p class="project-description">
+          This section highlights small projects I have developed using tools
+          like HTML, CSS, JavaScript, and React.js. These projects demonstrate
+          my skills in front-end development, problem-solving and creating
+          practical solutions, reflecting my passion for coding and learning.
+        </p>
+      </div>
+
+      <div class="project-container hidden">
+        <div class="project">
+          <img class="project-image" src="image/Rock Paper Scissors.png" />
+          <h2 class="project-title">Rock Paper Scissors</h2>
+          <br />
+          <p class="tech-stack">HTML, CSS, Javascript</p>
+          <br />
+          <div>
             <a
-              href="https://api.badgr.io/public/assertions/lZdO3fxcRFa7yLKimXjVEA?identity__email=changsuetyan23%40gmail.com"
+              href="https://github.com/Suetyan23/My-Portfolio/tree/main/Rock%20Paper%20Scissors"
               target="_blank"
-              >View Certificate</a
             >
+              <i id="gitHubIcon" class="fa-brands fa-github fa-spin fa-xl"></i
+            ></a>
+            <div class="tooltip" id="gitHubTooltip">Rock Paper Scissors.</div>
           </div>
         </div>
 
-        <div class="certification-image-container">
-          <iframe
-            class="certification-image deanlist"
-            src="DeanList.pdf"
-            frameborder="0"
-          ></iframe>
-          <div class="certification-details">
-            <h3 class="certification-name"><u>Dean's List Award</u></h3>
-            <p>
-              Awarded for achieving a high GPA during the April 2024 semester,
-              recognizing dedication and academic excellence.
-            </p>
+        <div class="project">
+          <img class="project-image" src="image/flappyBirdPhoto.png" />
+          <h2 class="project-title">Flappy Bird</h2>
+          <br />
+          <p class="tech-stack">HTML, CSS, Javascript</p>
+          <br />
+          <div>
+            <a
+              href="https://github.com/Suetyan23/My-Portfolio/tree/main/Flappy%20bird"
+              target="_blank"
+            >
+              <i class="fa-brands fa-github fa-spin fa-xl"></i
+            ></a>
+            <div class="tooltip">Flappy Bird.</div>
+          </div>
+        </div>
+
+        <div class="project">
+          <img class="project-image" src="image/calculator.png" />
+          <h2 class="project-title">Calculator</h2>
+          <br />
+          <p class="tech-stack">HTML, CSS, Javascript</p>
+          <br />
+          <div>
+            <a
+              href="https://github.com/Suetyan23/My-Portfolio/blob/main/Exercise/calculator.html"
+              target="_blank"
+            >
+              <i class="fa-brands fa-github fa-spin fa-xl"></i
+            ></a>
+            <div class="tooltip">Calculator html.</div>
+          </div>
+        </div>
+
+        <div class="project card">
+          <img class="project-image card-image" src="image/ToDoList.png" />
+          <h2 class="project-title card-title">To-do-list</h2>
+          <br />
+          <p class="tech-stack card-text">React.js</p>
+          <br />
+          <div>
+            <a
+              href="https://github.com/Suetyan23/React.js/tree/main/my-react-app/src/ToDoList"
+              target="_blank"
+            >
+              <i class="fa-brands fa-github fa-spin fa-xl"></i
+            ></a>
+            <div class="tooltip">To-do-list.</div>
+          </div>
+        </div>
+
+        <div class="project card">
+          <img class="project-image card-image" src="image/Stopwatch.png" />
+          <h2 class="project-title card-title">Stopwatch</h2>
+          <br />
+          <p class="tech-stack card-text">React.js</p>
+          <br />
+          <div>
+            <a
+              href="https://github.com/Suetyan23/React.js/blob/main/my-react-app/src/Stopwatch.jsx"
+              target="_blank"
+            >
+              <i class="fa-brands fa-github fa-spin fa-xl"></i
+            ></a>
+            <div class="tooltip">Stopwatch.</div>
+          </div>
+        </div>
+      </div>
+
+      <footer></footer>
+    </section>
+    <!--end Project-->
+
+    <!--start Certification-->
+    <section id="Certifications">
+      <h1 class="certification-header">Certificates</h1>
+      <div>
+        <div class="certification-container">
+          <h3 class="certification-name"><u>> Capstone Project</u></h3>
+          <div class="certification-image-container">
+            <img src="image/capstone1.JPG" class="certification-image" />
+            <img src="image/capstone2.JPG" class="certification-image" />
+            <img src="image/capstone3.JPG" class="certification-image" />
+            <img src="image/capstone4.JPG" class="certification-image" />
+            <img src="image/capstone5.JPG" class="certification-image" />
+          </div>
+        </div>
+
+        <div class="certification-container">
+          <h3 class="certification-name"><u>> Google Hackathon 2024</u></h3>
+          <div class="certification-image-container">
+            <img
+              src="image/GoogleHackathon.png"
+              class="google-certification-image"
+              alt="Google Hackathon Certificate"
+            />
+            <div>
+              <p>
+                Leveraging Google Forms, Google Sheets, and Google Apps Script
+                to streamline the finance department's claim process: Employees
+                fill out the details in a Google Form, which automatically logs
+                and updates the data in a linked Google Sheet. Additionally,
+                Google Apps Script is used to manage the storage of receipt
+                images in Google Drive.
+              </p>
+              <a
+                href="https://api.badgr.io/public/assertions/lZdO3fxcRFa7yLKimXjVEA?identity__email=changsuetyan23%40gmail.com"
+                target="_blank"
+                >View Certificate</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="certification-container">
+          <h3 class="certification-name"><u>> Dean's List Award</u></h3>
+          <div class="certification-image-container">
+           <img src="image/DeanList1.png" alt="" class="certification-image">
+           <img src="image/DeanList1.png" alt="" class="certification-image">
+              <p>
+                Awarded for achieving a high GPA,
+                recognizing dedication and academic excellence.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
+    <!--end Certification-->
 
     <script defer src="Portfolio.js"></script>
     <script
