@@ -3,6 +3,11 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('About').scrollIntoView();
 });
 
+//logo onclick go to about
+function goToAbout() {
+    document.getElementById("About").scrollIntoView({ behavior: "smooth" });
+}
+
 //night mode and bright mode
 let button = document.getElementById('mode');
 let isNightMode = localStorage.getItem('mode') === 'night';
@@ -26,6 +31,12 @@ button.addEventListener('click', function () {
     }
 });
 button.click();
+
+//hanmburger
+function toggleMenu() {
+    document.querySelector(".nav-links").classList.toggle("active");
+}
+
 
 //view resume 
 function openPDF(fileName) {
